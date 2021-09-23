@@ -1,6 +1,12 @@
-# face-verification-with-siamese-networks
+# 🧑face-verification-with-siamese-networks
+
+
+### 📝Description
+---
+In this project, we are going to implement an End-to-End Deep Learning/Machine Learning project. What this web application is does is that, first get two gray scale faces(that were extracted by Haar Cascade face detection algorithm) from user. As soon as user clicks on the `Match` button, model recieves both faces, applies some image preprocessing actions on them and then pass these two images into the model itself. Take note that this specific siamese network recieves two images as inputs and the applies `Contrastive Loss` which we will discuss later on. In the next step, the model returns a number which is the `distance` between two faces. If the distance is greater or equal to a specific threshold(in this case the threshold is equal to `0.4`) then returns `Not Matched`; which means these two images **does not** belong to the same person. Otherwise it returns `Matched` which means these two faces belong to the same person.
 
 ```
+
 ├── LICENSE
 ├── Makefile           <- Makefile with commands like `make data` or `make train`
 ├── README.md          <- The top-level README for developers using this project.
