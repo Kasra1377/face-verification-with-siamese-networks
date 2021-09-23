@@ -5,6 +5,17 @@
 ---
 In this project, we are going to implement an End-to-End Deep Learning/Machine Learning project. What this web application is does is that, first get two gray scale faces(that were extracted by Haar Cascade face detection algorithm) from user. As soon as user clicks on the `Match` button, model recieves both faces, applies some image preprocessing actions on them and then pass these two images into the model itself. Take note that this specific siamese network recieves two images as inputs and the applies `Contrastive Loss` which we will discuss later on. In the next step, the model returns a number which is the `distance` between two faces. If the distance is greater or equal to a specific threshold(in this case the threshold is equal to `0.4`) then returns `Not Matched`; which means these two images **does not** belong to the same person. Otherwise it returns `Matched` which means these two faces belong to the same person.
 
+
+### ⚡Face Recognition vs Face Detection vs Face Validation
+---
+Before we start off and dig into this project, frst we have to comprehend some terminologies and their differences in the face field.
+
+First of all it has to be mentioned that face detection and face recognition are completely two different terminologies. With face detection, as its name suggests, we can detect and localize available face(s) in an image. Face detection algorithm tells you that where is the face exactly in the image. But on the other hand, a face recognition algorithm is a different algorithm. face recognizer gets the ROI of the image where the face is exactly located in that region and performs some actions on the ROI and then identifies the person that this face belongs to.We have various methods to detect and extract face(s) in the image, some of them are Haar Cascades , OpenCV's deep learning based face detector , HOG + Linear SVM and etc.
+
+The next terminology is `Face Verification` which is completely different from previous terminologies. In face verification we select a face and then we compare it to one or more other faces. By doing this, we recieve two possible outputs from model, `same` or `different`. But in face recognition our output is the name or ground truth of the recognized face.
+
+
+
 ```
 
 ├── LICENSE
