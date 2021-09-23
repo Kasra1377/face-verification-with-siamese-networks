@@ -14,6 +14,11 @@ First of all it has to be mentioned that face detection and face recognition are
 
 The next terminology is `Face Verification` which is completely different from previous terminologies. In face verification we select a face and then we compare it to one or more other faces. By doing this, we recieve two possible outputs from model, `same` or `different`. But in face recognition our output is the name or ground truth of the recognized face.
 
+### 📐Siamese Networks
+---
+Siamese Networks are a type of neural network architectures that consists of two or more convolutional neural networks(CNNs) that work in parallel. We call these CNNs subnetworks. All of the subnetworks are identical. In addition to this, these subnetworkshave the same parameters, architecture and weights. Any parameter updates are **mirrored** across both subnetworks; meaning that if the weights of one of the subnetworks is updated then the weights of all of the other networks will be updated as well.
+
+As mentioned, each subnetwork consists of a CNN network. Each CNN network recieves an gray scale face image with a shape of `(62, 47, 1)` with a batch size of 4. Then the input process into these `Conv2D => BN => ReLU => Pooling` sequence and then it is converterd into a `48-d` vector by a `GlobalMaxPooling` layer. After this process, these networks return the vectore in order to model be able to calculate the `euclidean distance` between vectors and do the further processings.
 
 
 ```
