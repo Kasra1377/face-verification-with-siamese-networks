@@ -27,8 +27,11 @@ Siamese Networks are a type of neural network architectures that consists of two
 
 As mentioned, each subnetwork consists of a CNN network. Each CNN network recieves an gray scale face image with a shape of `(62, 47, 1)` with a batch size of 4. Then the input process into these `Conv2D => BN => ReLU => Pooling` sequence and then it is converterd into a `48-d` vector by a `GlobalMaxPooling` layer. After this process, these networks return the vectore in order to model be able to calculate the `euclidean distance` between vectors and do the further processings.
 
-  For the loss function, `Contrastive Loss` is used. The reason is that in many ways this loss function outperforms and more accurate than `Binary Cross-Entropy`.The contrasive loss is calculatedby the formula down below:
+  For the loss function, `Contrastive Loss` is used. The reason is that in many ways this loss function outperforms and more accurate than `Binary Cross-Entropy`.The contrasive loss is calculated by the formula down below:
 
+<p align="center">
+  <img width="400" height="100" src="demo/contrastive_loss.png">
+</p>
 
 ### 📉Project Results
 ---
@@ -116,51 +119,3 @@ Kasra1377
 
 [Contrastive Loss for Siamese Networks with Keras and TensorFlow](https://www.pyimagesearch.com/2021/01/18/contrastive-loss-for-siamese-networks-with-keras-and-tensorflow/)
 
-
-
-```
-├── LICENSE
-├── Makefile           <- Makefile with commands like `make data` or `make train`
-├── README.md          <- The top-level README for developers using this project.
-├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
-│
-├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-│
-├── models             <- Trained and serialized models, model predictions, or model summaries
-│
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-│
-├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-├── src                <- Source code for use in this project.
-│   ├── __init__.py    <- Makes src a Python module
-│   │
-│   ├── data           <- Scripts to download or generate data
-│   │   └── make_dataset.py
-│   │
-│   ├── features       <- Scripts to turn raw data into features for modeling
-│   │   └── build_features.py
-│   │
-│   ├── models         <- Scripts to train models and then use trained models to make
-│   │   │                 predictions
-│   │   ├── predict_model.py
-│   │   └── train_model.py
-│   │
-│   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-│       └── visualize.py
-│
-└── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
-```
