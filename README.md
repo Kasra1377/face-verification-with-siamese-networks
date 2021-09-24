@@ -51,7 +51,7 @@ After you cloned this repository, you have to downloadand install the Anaconda. 
 ```
 conda create -n verification python=3.7
 ```
-This command 
+This command creates a virtual env with a name of `verification`. Note that you can choose your own arbitrary name for virtual enviroment. 
 
 ```
 ├── LICENSE
