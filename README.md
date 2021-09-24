@@ -1,5 +1,12 @@
 # 🧑face-verification-with-siamese-networks
 
+<p align="center">
+  <img width="600" height="350" src="demo/Capture No.1.PNG">
+</p>
+
+<p align="center">
+  <img width="600" height="350" src="demo/Capture No.2.PNG">
+</p>
 
 ### 📝Description
 ---
@@ -95,7 +102,19 @@ Now the web app is openedin your browser locally. You can use the available crop
 
 **Others:** ![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
 
+### ❌Bugs & Issues
+---
+If you ever encountered any bugs or any technical issues in this projects you can report it by `issues` section of this repository or you can contact me by my email address. 
 
+### 👥Contributers
+---
+Kasra1377
+
+### 🔻References
+---
+[Building image pairs for siamese networks with Python](https://www.pyimagesearch.com/2020/11/23/building-image-pairs-for-siamese-networks-with-python/)
+
+[Contrastive Loss for Siamese Networks with Keras and TensorFlow](https://www.pyimagesearch.com/2021/01/18/contrastive-loss-for-siamese-networks-with-keras-and-tensorflow/)
 
 
 
