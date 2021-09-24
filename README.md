@@ -25,9 +25,9 @@ The next terminology is `Face Verification` which is completely different from p
 ---
 Siamese Networks are a type of neural network architectures that consists of two or more convolutional neural networks(CNNs) that work in parallel. We call these CNNs subnetworks. All of the subnetworks are identical. In addition to this, these subnetworkshave the same parameters, architecture and weights. Any parameter updates are **mirrored** across both subnetworks; meaning that if the weights of one of the subnetworks is updated then the weights of all of the other networks will be updated as well.
 
-As mentioned, each subnetwork consists of a CNN network. Each CNN network recieves an gray scale face image with a shape of `(62, 47, 1)` with a batch size of 4. Then the input process into these `Conv2D => BN => ReLU => Pooling` sequence and then it is converterd into a `48-d` vector by a `GlobalMaxPooling` layer. After this process, these networks return the vectore in order to model be able to calculate the `euclidean distance` between vectors and do the further processings.
+As mentioned, each subnetwork consists of a CNN network. Each CNN network recieves a gray scale face image with a shape of `(62, 47, 1)` with a batch size of 4. Then the input process into these `Conv2D => BN => ReLU => Pooling` sequence and then it is converterd into a `48-d` vector by a `GlobalMaxPooling` layer. After this process, these networks return the vectore in order to model be able to calculate the `euclidean distance` between vectors and do the further processings.
 
-  For the loss function, `Contrastive Loss` is used. The reason is that in many ways this loss function outperforms and more accurate than `Binary Cross-Entropy`.The contrasive loss is calculated by the formula down below:
+For the loss function, `Contrastive Loss` is used. The reason is that in many ways this loss function outperforms and has more accurate results than `Binary Cross-Entropy`. The contrasive loss function is calculated by the formula down below:
 
 <p align="center">
   <img width="400" height="100" src="demo/contrastive_loss.png">
@@ -35,7 +35,7 @@ As mentioned, each subnetwork consists of a CNN network. Each CNN network reciev
 
 ### 📉Project Results
 ---
-The model has been created and put into a web app and you can see the performance and the output of the model down below:
+The model has been created and put into a web application and you can see the performance and the output of the model down below:
 
 ![Screen Record No 2](https://user-images.githubusercontent.com/56585524/134305841-9062aa5a-2090-4800-84e9-20506faa9057.gif)
 ---
@@ -49,7 +49,7 @@ In addition to this, you can observe the loss function of the model for both tra
 
 ### 🖥 Installation
 ---
-The Code is written in Python 3.7.5. If you don't have Python installed you can find it [here](https://www.python.org/downloads/). If you are using a lower version of Python you can upgrade using the pip package, ensuring you have the latest version of pip. To install the required packages and libraries, run this command in the project directory after cloning the repository:
+The Code is written in Python 3.7.5. If you don't have Python installed you can find it [here](https://www.python.org/downloads/). If you are using a lower version of Python you can upgrade using the pip package, ensure you have the latest version of pip. To install the required packages and libraries, run this command in the project directory after cloning the repository:
 ```
 git clone git@github.com:Kasra1377/lbp-face-recognition.git
 ```
@@ -57,11 +57,11 @@ or
 ```
 git clone https://github.com/Kasra1377/lbp-face-recognition.git
 ```
-After you cloned this repository, you have to downloadand install the Anaconda. You can find the download link from this [link](https://www.anaconda.com/products/individual). After the installation, open the Anaconda Prompt and type the code down below:
+After you cloned this repository, you have to download and install the Anaconda. You can find the download link from this [link](https://www.anaconda.com/products/individual). After the installation, open the Anaconda Prompt and type the code down below:
 ```
 conda create -n verification python=3.7
 ```
-This command creates a virtual env with a name of `verification`. Note that you can choose your own arbitrary name for virtual enviroment. After virtual enviroment was created, via Anaconda Prompt switch to the directory of the project folder and then type:
+This command creates a virtual env with a name of `verification`. Note that you can choose your own arbitrary name for virtual enviroment. After virtual enviroment is created,  switch to the directory of the project folder via Anaconda Prompt and then type:
 
 ```
 conda activate verification
@@ -74,7 +74,7 @@ conda install file requirements.txt
 
 By doing this and downloading all of the required packages, you are ready to run this project on your local computer.
 
-To run the web app on your computer, first open `app.py` python file by your own IDE and switch the current virtual env of your IDE into your newly created virtual enviroment. After that open your Git Bash and type the following commands respectively:
+To run the web app on your computer, first open `app.py` python file by your own IDE and switch from current virtual env of your IDE into your newly created virtual enviroment. After that open your Git Bash and type the following commands respectively:
 
 ```
 export FLASK_APP=app.py
@@ -88,7 +88,7 @@ export FLASK_ENV=development
 FLASK_DEBUG=1 flask run
 ```
 
-Now the web app is openedin your browser locally. You can use the available cropped faces in `samples` folder in order to upload and match the faces.
+Now the web app is opened in your browser locally. You can use the available cropped faces in `samples` folder; in order to upload and match the faces.
 
 ### 🛠Technologies Used
 ---
