@@ -51,7 +51,53 @@ After you cloned this repository, you have to downloadand install the Anaconda. 
 ```
 conda create -n verification python=3.7
 ```
-This command creates a virtual env with a name of `verification`. Note that you can choose your own arbitrary name for virtual enviroment. 
+This command creates a virtual env with a name of `verification`. Note that you can choose your own arbitrary name for virtual enviroment. After virtual enviroment was created, via Anaconda Prompt switch to the directory of the project folder and then type:
+
+```
+conda activate verification
+```
+This command activates your own virtual enviroment that you have just created. In order to install all of the libraries that used in this project, you have to type:
+
+```
+conda install file requirements.txt
+```
+
+By doing this and downloading all of the required packages, you are ready to run this project on your local computer.
+
+To run the web app on your computer, first open `app.py` python file by your own IDE and switch the current virtual env of your IDE into your newly created virtual enviroment. After that open your Git Bash and type the following commands respectively:
+
+```
+export FLASK_APP=app.py
+```
+
+```
+export FLASK_ENV=development
+```
+
+```
+FLASK_DEBUG=1 flask run
+```
+
+Now the web app is openedin your browser locally. You can use the available cropped faces in `samples` folder in order to upload and match the faces.
+
+### 🛠Technologies Used
+---
+**IDE**:  ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+
+
+**Language(s):**  ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+
+**Libraries:**  ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)  ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+
+**Front-End:**  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+**Backend:**  ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
+
+**Others:** ![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
+
+
+
+
 
 ```
 ├── LICENSE
