@@ -20,9 +20,40 @@ Siamese Networks are a type of neural network architectures that consists of two
 
 As mentioned, each subnetwork consists of a CNN network. Each CNN network recieves an gray scale face image with a shape of `(62, 47, 1)` with a batch size of 4. Then the input process into these `Conv2D => BN => ReLU => Pooling` sequence and then it is converterd into a `48-d` vector by a `GlobalMaxPooling` layer. After this process, these networks return the vectore in order to model be able to calculate the `euclidean distance` between vectors and do the further processings.
 
+  For the loss function, `Contrastive Loss` is used. The reason is that in many ways this loss function outperforms and more accurate than `Binary Cross-Entropy`.The contrasive loss is calculatedby the formula down below:
+
+
+### 📉Project Results
+---
+The model has been created and put into a web app and you can see the performance and the output of the model down below:
+
+![Screen Record No 2](https://user-images.githubusercontent.com/56585524/134305841-9062aa5a-2090-4800-84e9-20506faa9057.gif)
+---
+![Screen Record No 1](https://user-images.githubusercontent.com/56585524/134305957-83af21c6-a32c-489c-8824-c450a66de128.gif)
+
+In addition to this, you can observe the loss function of the model for both training and test set:
+
+<p align="center">
+  <img width="500" height="300" src="output/plot.png">
+</p>
+
+### 🖥 Installation
+---
+The Code is written in Python 3.7.5. If you don't have Python installed you can find it [here](https://www.python.org/downloads/). If you are using a lower version of Python you can upgrade using the pip package, ensuring you have the latest version of pip. To install the required packages and libraries, run this command in the project directory after cloning the repository:
+```
+git clone git@github.com:Kasra1377/lbp-face-recognition.git
+```
+or
+```
+git clone https://github.com/Kasra1377/lbp-face-recognition.git
+```
+After you cloned this repository, you have to downloadand install the Anaconda. You can find the download link from this [link](https://www.anaconda.com/products/individual). After the installation, open the Anaconda Prompt and type the code down below:
+```
+conda create -n verification python=3.7
+```
+This command 
 
 ```
-
 ├── LICENSE
 ├── Makefile           <- Makefile with commands like `make data` or `make train`
 ├── README.md          <- The top-level README for developers using this project.
@@ -68,6 +99,3 @@ As mentioned, each subnetwork consists of a CNN network. Each CNN network reciev
 │
 └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 ```
-
-![Screen Record No 2](https://user-images.githubusercontent.com/56585524/134305841-9062aa5a-2090-4800-84e9-20506faa9057.gif)
-![Screen Record No 1](https://user-images.githubusercontent.com/56585524/134305957-83af21c6-a32c-489c-8824-c450a66de128.gif)
